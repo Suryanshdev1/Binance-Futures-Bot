@@ -1,0 +1,32 @@
+# Render Blueprint
+# This file tells Render how to deploy your web demo.
+# Place this in the ROOT of your project (next to cli.py).
+
+services:
+  # Option A: Streamlit Demo
+  - type: web
+    name: binance-bot-streamlit
+    runtime: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt -r web_demo/requirements.txt"
+    startCommand: "streamlit run web_demo/app.py --server.port $PORT --server.address 0.0.0.0"
+    envVars:
+      - key: BINANCE_API_KEY
+        sync: false  # Set manually in Render dashboard
+      - key: BINANCE_SECRET_KEY
+        sync: false
+      - key: PYTHON_VERSION
+        value: 3.11.0
+
+  # Option B: FastAPI Demo (uncomment to use instead)
+  # - type: web
+  #   name: binance-bot-api
+  #   runtime: python
+  #   plan: free
+  #   buildCommand: "pip install -r requirements.txt -r web_demo/requirements.txt"
+  #   startCommand: "uvicorn web_demo.api:app --host 0.0.0.0 --port $PORT"
+  #   envVars:
+  #     - key: BINANCE_API_KEY
+  #       sync: false
+  #     - key: BINANCE_SECRET_KEY
+  #       sync: false

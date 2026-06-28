@@ -1,0 +1,17 @@
+# Web Demo Dependencies
+# Add these to your main requirements.txt OR keep them in this file
+# and install with: pip install -r web_demo/requirements.txt
+
+# --- Streamlit (choose one) ---
+streamlit>=1.28.0
+
+# --- FastAPI (choose one) ---
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.5.0
+
+# --- Shared (already in your main requirements.txt) ---
+# python-binance>=1.0.27
+# python-dotenv>=1.0.1
+# rich>=13.9.4
+# requests>=2.32.3
