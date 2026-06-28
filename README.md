@@ -333,3 +333,7 @@ This project is for educational and assessment purposes.
 ## Support
 
 For issues or questions, please refer to the project documentation or contact the development team.
+
+## Author
+
+Suryansh Dev
