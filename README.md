@@ -85,6 +85,47 @@ BINANCE_SECRET_KEY=your_secret_key_here
 | `LOG_FILE_PATH` | `logs/trading_bot.log` | Path to log file |
 | `MAX_RETRIES` | `3` | Maximum API retry attempts |
 
+## 🌐 Live Demo
+
+**Portfolio Website:** https://binance-futures-bot-ilvanpqwt4jgqrjnxdhuuz.streamlit.app/
+
+> **Note:** The live web demo runs on **Streamlit Cloud** (US-based servers). Due to Binance's geographic restrictions, the web version **cannot connect to the Binance Testnet API** from the hosting server.  
+>  
+> **The web interface works perfectly** — you can explore the UI, form validation, and order summary flow. However, actual order placement requires running the app locally or via VPN.
+
+---
+
+## 🖥️ How to Use This Project
+
+### Option A: CLI (Recommended — Works Everywhere)
+
+The **command-line version** runs on your local machine and connects directly to Binance Testnet. This works regardless of your location because it uses your own internet connection.
+
+```bash
+python cli.py --symbol BTCUSDT --side BUY --type MARKET --quantity 0.001
+```
+
+After placing an order, you can verify it on testnet.binancefuture.com under Futures → Orders → Order History.
+
+### Option B: Web Interface (Requires Local Run or VPN)
+
+To use the web interface with real API calls:
+
+#### 1. Local run (uses your own network — works without VPN):
+
+- bash
+```bash
+streamlit run web_demo/app.py
+```
+- Then open http://localhost:8501 in your browser.
+
+#### 2. Deployed version (Streamlit Cloud):
+
+- The deployed website uses cloud servers located in the US.
+- Binance blocks API requests from these data center IP addresses.
+- If you are in a Binance-supported region or use a VPN, the deployed website will work with real API calls.
+- Otherwise, use the local run method above.
+
 ## Usage
 
 ### Command-Line Syntax
