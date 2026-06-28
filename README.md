@@ -87,7 +87,7 @@ BINANCE_SECRET_KEY=your_secret_key_here
 
 ## 🌐 Live Demo
 
-**Portfolio Website:** https://binance-futures-bot-ilvanpqwt4jgqrjnxdhuuz.streamlit.app/
+**Demo Website:** https://binance-futures-bot-ilvanpqwt4jgqrjnxdhuuz.streamlit.app/
 
 > **Note:** The live web demo runs on **Streamlit Cloud** (US-based servers). Due to Binance's geographic restrictions, the web version **cannot connect to the Binance Testnet API** from the hosting server.  
 >  
